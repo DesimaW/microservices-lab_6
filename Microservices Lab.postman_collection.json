@@ -1,0 +1,29 @@
+{
+	"info": {
+		"_postman_id": "2a03dc07-a79d-41cd-b096-fd7f63331ebe",
+		"name": "Microservices Lab",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42540971"
+	},
+	"item": [
+		{
+			"name": "GET All Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"items"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
