@@ -1,0 +1,50 @@
+{
+  "info": {
+    "_postman_id": "item-service-collection",
+    "name": "Item Service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET All Items",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8081/items",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8081",
+          "path": ["items"]
+        }
+      }
+    },
+    {
+      "name": "POST Create Item",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"name\": \"Notebook\"\n}" },
+        "url": {
+          "raw": "http://localhost:8081/items",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8081",
+          "path": ["items"]
+        }
+      }
+    },
+    {
+      "name": "GET Item By ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8081/items/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8081",
+          "path": ["items", "1"]
+        }
+      }
+    }
+  ]
+}
