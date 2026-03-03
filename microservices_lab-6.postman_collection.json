@@ -106,19 +106,7 @@
         }
       }
     },
-    {
-      "name": "GET All Orders",
-      "request": {
-        "method": "GET",
-        "url": {
-          "raw": "http://localhost:8080/payments",
-          "protocol": "http",
-          "host": ["localhost"],
-          "port": "8080",
-          "path": ["payments"]
-        }
-      }
-    },
+
     {
       "name": "Process Payment",
       "request": {
@@ -147,6 +135,19 @@
           "host": ["localhost"],
           "port": "8080",
           "path": ["payments"]
+        }
+      }
+    },
+    {
+      "name": "GET Payment By ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/payments/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["payments", "1"]
         }
       }
     }
