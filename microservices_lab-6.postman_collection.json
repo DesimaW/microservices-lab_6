@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "61632626-2e92-44bc-9cef-66083a2564ec",
+		"name": "microservices_lab-6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42540971"
+	},
+  "item": [
+    {
+      "name": "GET All Items",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/items",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["items"]
+        }
+      }
+    },
+    {
+      "name": "Create Item",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"name\": \"Headphones\"\n}" },
+        "url": {
+          "raw": "http://localhost:8080/items",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["items"]
+        }
+      }
+    },
+    {
+      "name": "Items - POST create (Mouse)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"name\": \"Mouse\"\n}" },
+        "url": {
+          "raw": "http://localhost:8080/items",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["items"]
+        }
+      }
+    },
+    {
+      "name": "GET Item By ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/items/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["items", "1"]
+        }
+      }
+    },
+    {
+      "name": "Get All Orders",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/orders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["orders"]
+        }
+      }
+    },
+    {
+      "name": "Create Order",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"item\": \"Laptop\",\n  \"quantity\": 2,\n  \"customerId\": \"C001\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/orders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["orders"]
+        }
+      }
+    },
+    {
+      "name": "GET Order By ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/orders/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["orders", "1"]
+        }
+      }
+    },
+    {
+      "name": "GET All Orders",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/payments",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["payments"]
+        }
+      }
+    },
+    {
+      "name": "Process Payment",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"orderId\": 1,\n  \"amount\": 1299.99,\n  \"method\": \"CARD\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/payments/process",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["payments", "process"]
+        }
+      }
+    },
+    {
+      "name": "GET All Payments",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/payments",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["payments"]
+        }
+      }
+    }
+  ]
+}
