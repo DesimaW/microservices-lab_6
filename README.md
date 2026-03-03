@@ -93,6 +93,3 @@ Body:
 
 - `GET http://localhost:8080/payments/1`
 
-## Notes
-- All data is persisted in MongoDB Atlas (database `Lab05`).
-- Services do not call each other directly; routing is done via the API Gateway.
